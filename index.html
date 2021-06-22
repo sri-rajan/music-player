@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+<body>
+    <!-- title of the app -->
+    <nav class="navbar center">
+        <div class="container-fluid ">
+          <span class="navbar-brand ">Player</span>
+        </div>
+    </nav>
+    
+    <!-- container for the  cards -->
+    <div class="containers">
+        <!-- songs card-->
+        <div id='songs'>
+          <h3 class="head">Songs</h3>
+            <div class="card" id='1'>
+                <img src="static/images/alone.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Alone,Pt.II</h5>
+                  <p class="card-text">Alan Walker, Ava Max</p>
+                </div>
+            </div>
+
+            <div class="card" id='2'>
+                <img src="static/images/animal.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Maroon 5 Animals</h5>
+                  <p class="card-text">Adam Levine, Shellback, Benny Blanco</p>
+                </div>
+            </div>
+
+            <div class="card" id='3'>
+              <img src="static/images/dusk till dawn.jfif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Dusk Till Dawn</h5>
+                <p class="card-text">	Zayn MalikSia, FurlerAlex, OrietDavid, PhelanGreg </p>
+              </div>
+            </div>
+
+            <div class="card" id='4'>
+                <img src="static/images/girls like you.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Girls Like You</h5>
+                  <p class="card-text">Adam Levine, Henry Walter, Belcalis, Almanzar Brittany</p>
+                </div>
+            </div>
+
+            <div class="card" id='5'  >
+              <img src="static/images/perfect.jfif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Perfect</h5>
+                <p class="card-text">ED Sheeran</p>
+              </div>
+            </div>
+        </div>
+          <hr>
+
+        <!-- movies card -->
+        <div id='Videos'>
+          <h3 class='head'>Videos</h3>
+
+          <a href="https://youtu.be/DyDfgMOUjCI">
+            <div class="card">
+                <img src="static/images/bad guy.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Bad Guy</h5>
+                  <p class="card-text">Billie Eilish, Finneas</p>
+                </div>
+            </div>
+          </a>
+
+          <a href="https://youtu.be/kJQP7kiw5Fk">
+            <div class="card">
+                <img src="static/images/despacito.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Despacito</h5>
+                  <p class="card-text"> Luis Fonsi</p>
+                </div>
+            </div>
+          </a>
+
+          <a href="https://youtu.be/jzD_yyEcp0M">
+            <div class="card">
+              <img src="static/images/friends.jfif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Friends</h5>
+                <p class="card-text">	Marshmello, Anne Marie </p>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://youtu.be/y2tEPmwWEiI">
+            <div class="card"  onclick="document.getElementById('player').play()">
+                <img src="static/images/sugar and brownies.jfif" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Sugar and Brownies</h5>
+                  <p class="card-text">Dharia</p>
+                </div>
+            </div>
+          </a>
+
+          <a href="https://youtu.be/Pkh8UtuejGw">
+            <div class="card"  onclick="document.getElementById('player').play()">
+              <img src="static/images/senorita.jfif" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Senorita</h5>
+                <p class="card-text">Shawn Mendes, Camila Cabello,Charli XCX</p>
+              </div>
+            </div>
+          </a>
+            
+        </div>
+    </div>
+
+  <div id="preview">
+    <img id="current-img" class='ani' src='static/images/alone.jfif'>
+
+      <span class="playpause">
+        <!-- backward -->
+        <svg  id='back'xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="white" class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
+          <path d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L8.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L1 7.248V4a.5.5 0 0 0-.5-.5z"/>
+        </svg>
+
+        <!-- play -->
+        <svg id='play' width="44" height="44" viewBox="0 0 24 24" fill="white" style="display: inline-block; vertical-align: text-bottom;"><path d="M9.5 15.584V8.416a.5.5 0 01.77-.42l5.576 3.583a.5.5 0 010 .842l-5.576 3.584a.5.5 0 01-.77-.42z"></path><path fill-rule="evenodd" d="M12 2.5a9.5 9.5 0 100 19 9.5 9.5 0 000-19zM1 12C1 5.925 5.925 1 12 1s11 4.925 11 11-4.925 11-11 11S1 18.075 1 12z"></path></svg>
+        
+        <!-- pause -->
+        <svg id='pause' xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="white" class="bi bi-pause" viewBox="0 0 16 16">
+          <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+
+        <!-- forward -->
+        <svg  id='front' xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="white" class="bi bi-skip-forward-fill" viewBox="0 0 16 16">
+          <path d="M15.5 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V8.753l-6.267 3.636c-.54.313-1.233-.066-1.233-.697v-2.94l-6.267 3.636C.693 12.703 0 12.324 0 11.693V4.308c0-.63.693-1.01 1.233-.696L7.5 7.248v-2.94c0-.63.693-1.01 1.233-.696L15 7.248V4a.5.5 0 0 1 .5-.5z"/>
+        </svg>
+      </span>
+
+
+      <span class='updown'>
+      <!-- volume down -->
+        <svg  id='down' xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="white" class="bi bi-volume-down" viewBox="0 0 16 16">
+          <path  d="M9 4a.5.5 0 0 0-.812-.39L5.825 5.5H3.5A.5.5 0 0 0 3 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 9 12V4zM6.312 6.39 8 5.04v5.92L6.312 9.61A.5.5 0 0 0 6 9.5H4v-3h2a.5.5 0 0 0 .312-.11zM12.025 8a4.486 4.486 0 0 1-1.318 3.182L10 10.475A3.489 3.489 0 0 0 11.025 8 3.49 3.49 0 0 0 10 5.525l.707-.707A4.486 4.486 0 0 1 12.025 8z"/>
+        </svg>
+
+        <!-- volume up -->
+        <svg  id='up' xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="white" class="bi bi-volume-up" viewBox="0 0 16 16">
+          <path d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+          <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z"/>
+          <path d="M10.025 8a4.486 4.486 0 0 1-1.318 3.182L8 10.475A3.489 3.489 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.486 4.486 0 0 1 10.025 8zM7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12V4zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11z"/>
+        </svg>
+      </span>
+
+  </div>
+  <audio id='1a' src='static/songs/alone.mp3'></audio>
+  <audio id='2a' src='static/songs/Animals.mp3'></audio>
+  <audio id='3a' src='static/songs/Dusk till Dawn.mp3'></audio>
+  <audio id='4a' src='static/songs/girls like you.mp3'></audio>
+  <audio id='5a' src='static/songs/perfect.mp3'></audio>
+
+  <script src='static/script.js'></script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
