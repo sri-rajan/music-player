@@ -36,8 +36,6 @@ function displays(id){
     document.getElementById('pause').addEventListener('click',function(){pauses(nextid)});
     document.getElementById('front').addEventListener('click',function(){fronts(nextid)});
     document.getElementById('back').addEventListener('click',function(){backs(nextid)});
-    document.getElementById('up').addEventListener('click',function(){ups(nextid)});
-    document.getElementById('down').addEventListener('click',function(){downs(nextid)});
 
 }
 
@@ -81,18 +79,3 @@ function closes(ids){
     document.getElementById('preview').setAttribute('style','display:none;')
 }
 
-//for volume up
-function ups(ids){
-    audio=document.getElementById(ids+'a');
-    audio.volume +=0.01;
-    console.log('ups');
-
-}
-
-//for volume down
-function downs(ids){
-    audio=document.getElementById(ids+'a');
-    audio.volume -=0.01;
-    console.log('down');
-
-}

@@ -63,7 +63,7 @@ a{
 }
 #preview{
     display:none;
-    justify-content:space-between;
+    justify-content:space-around;
     position:fixed;
     border-radius:30px;
     left:0;
